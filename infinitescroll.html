@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            text-align: center;
+            color: blue;
+            font-weight: 700;
+            width: 400px;
+            max-height: 400px;
+            background-color: aqua;
+            margin: auto;
+            font-size: larger;
+            overflow-y: scroll;
+            scroll-behavior: smooth;
+            border: 5px solid red;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        
+
+
+    </div>
+</body>
+</html>
+<script>
+    let container =document.getElementById("container");
+    var add=1;
+    container.addEventListener("scroll",funct)
+    function funct(){
+        console.log(container.scrollTop, container.clientHeight, container.scrollHeight);
+        if (container.scrollTop + container.clientHeight >= container.scrollHeight - 5) {
+     valupdate(i=i+25)
+  }
+    }
+    function valupdate(){
+i=0
+    while(i<25){
+        
+        
+        let p=document.createElement("p");
+        p.innerText="Masai Student"+ add++
+        container.append(p);
+        i++
+    }
+            
+            
+    }
+    valupdate()
+    
+  
+    
+    // 
+    
+
+</script>
